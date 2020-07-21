@@ -43,7 +43,6 @@ jobs:
       name: xenial-ppc64le
     - sudo: required
       name: focal-arm64-graviton2
-      language: minimal
       dist: focal
       arch: arm64-graviton2
       os: linux
