@@ -22,12 +22,6 @@ jobs:
       services:
         - docker
       name: trusty
-    - sudo: required
-      language: minimal
-      dist: focal
-      arch: arm64-graviton2
-      os: linux
-      group: dev
     - dist: precise
       os: linux
       name: precise
@@ -47,6 +41,13 @@ jobs:
       os: linux
       group: edge
       name: xenial-ppc64le
+    - sudo: required
+      name: focal-arm64-graviton2
+      language: minimal
+      dist: focal
+      arch: arm64-graviton2
+      os: linux
+      group: dev  
 env:
   global:
     - VERSION='5.24.3'
