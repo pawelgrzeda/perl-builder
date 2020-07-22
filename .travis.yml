@@ -46,15 +46,15 @@ jobs:
       group: edge
       virt: lxd
       perl:
-        - 5.30.3
-        - 5.30.2
+        - "5.30.3"
+        - "5.30.2"
     - name: focal-amd64
       dist: focal
       arch: amd64
       os: linux
       perl:
-        - 5.30.3
-        - 5.30.2
+        - "5.30.3"
+        - "5.30.2"
 env:
   global:
     - ARGS=''
