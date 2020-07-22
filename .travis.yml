@@ -8,7 +8,7 @@ jobs:
     group: edge
     virt: lxd
     perl: "5.30"
-  - name: focal-arm64-graviton2
+  - name: focal-arm64-graviton2b
     dist: focal
     arch: arm64-graviton2
     os: linux
