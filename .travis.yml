@@ -55,8 +55,6 @@ jobs:
       perl:
       - "5.30"
       - "5.29"
-script:
-  - return 0
 env:
   global:
     - ARGS=''
