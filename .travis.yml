@@ -39,22 +39,30 @@ jobs:
     #  os: linux
     #  group: edge
     #  name: xenial-ppc64le
-    - name: focal-arm64-graviton2
+    - name: focal-arm64-graviton2-30
       dist: focal
       arch: arm64-graviton2
       os: linux
       group: edge
       virt: lxd
-      perl:
-      - "5.30"
-      - "5.29"
-    - name: focal-amd64
+      perl: "5.30"
+    - name: focal-amd64-30
       dist: focal
       arch: amd64
       os: linux
-      perl:
-      - "5.30"
-      - "5.29"
+      perl: "5.30"
+    - name: focal-arm64-graviton2-29
+      dist: focal
+      arch: arm64-graviton2
+      os: linux
+      group: edge
+      virt: lxd
+      perl: "5.29"
+    - name: focal-amd64-29
+      dist: focal
+      arch: amd64
+      os: linux
+      perl: "5.29"
 env:
   global:
     - ARGS=''
@@ -64,7 +72,6 @@ install:
   - export PATH=$HOME/perl5/perlbrew/bin:$PATH
 
 before_script:
-  - export PACKER_TEMPLATES_BRANCH=ubuntu-2004
   - export LSB_RELEASE=$(lsb_release -rs 2>/dev/null || sw_vers -productVersion | sed 's/^\([0-9][0-9]*.[0-9][0-9]*\).*/\1/')
   - export OS_NAME=${OS_NAME:-$((lsb_release -is 2>/dev/null || echo "osx") | tr "A-Z" "a-z")}
   - export ARCH=$(uname -m)
