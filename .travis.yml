@@ -64,6 +64,7 @@ install:
   - export PATH=$HOME/perl5/perlbrew/bin:$PATH
 
 before_script:
+  - export PACKER_TEMPLATES_BRANCH=ubuntu-2004
   - export LSB_RELEASE=$(lsb_release -rs 2>/dev/null || sw_vers -productVersion | sed 's/^\([0-9][0-9]*.[0-9][0-9]*\).*/\1/')
   - export OS_NAME=${OS_NAME:-$((lsb_release -is 2>/dev/null || echo "osx") | tr "A-Z" "a-z")}
   - export ARCH=$(uname -m)
