@@ -39,26 +39,26 @@ jobs:
     #  os: linux
     #  group: edge
     #  name: xenial-ppc64le
-    - name: focal-arm64-graviton2-30
+    - name: focal-arm64-graviton2
       dist: focal
       arch: arm64-graviton2
       os: linux
       group: edge
       virt: lxd
       perl: "5.30"
-    - name: focal-amd64-30
+    - name: focal-amd64
       dist: focal
       arch: amd64
       os: linux
       perl: "5.30"
-    - name: focal-arm64-graviton2-29
+    - name: focal-arm64-graviton2
       dist: focal
       arch: arm64-graviton2
       os: linux
       group: edge
       virt: lxd
       perl: "5.29"
-    - name: focal-amd64-29
+    - name: focal-amd64
       dist: focal
       arch: amd64
       os: linux
